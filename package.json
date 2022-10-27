@@ -1,0 +1,16 @@
+{
+  "name": "weather",
+  "version": "1.0.1",
+  "description": "A utility to get weather info in Canada.",
+  "bin": {
+    "weather": "weather.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thecoder08",
+  "license": "MIT",
+  "dependencies": {
+    "xml2js": "^0.4.23"
+  }
+}
