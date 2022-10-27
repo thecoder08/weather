@@ -34,7 +34,7 @@ for (var site in result.siteList.site) {
     parseString(xml, function(err, result) {
       var conditions = result.siteData.currentConditions[0];
       console.log('⛅ Condition: ' + conditions.condition[0]);
-      console.log('🌡️  Temperature: ' + conditions.temperature[0]._ + '°C');
+      console.log('🌡️ Temperature: ' + conditions.temperature[0]._ + '°C');
       console.log('💧 Dew Point: ' + conditions.dewpoint[0]._ + '°C');
       console.log('⌚ Pressure: ' + conditions.pressure[0]._ + 'kPa');
       console.log('🌳 Visibility: ' + conditions.visibility[0]._ + 'km');
