@@ -33,10 +33,16 @@ for (var site in result.siteList.site) {
     response.on('end', function() {
     parseString(xml, function(err, result) {
       var conditions = result.siteData.currentConditions[0];
+      if (!conditions.condition[0]) {
+        conditions.condition[0] = 'Unavailable';
+      }
       console.log('⛅ Condition: ' + conditions.condition[0]);
       console.log('🌡️ Temperature: ' + conditions.temperature[0]._ + '°C');
       console.log('💧 Dew Point: ' + conditions.dewpoint[0]._ + '°C');
       console.log('⌚ Pressure: ' + conditions.pressure[0]._ + 'kPa');
+      if (!conditions.visibility[0]._) {
+        conditions.visibility[0]._ = '-';
+      }
       console.log('🌳 Visibility: ' + conditions.visibility[0]._ + 'km');
       console.log('💦 Relative Humidity: ' + conditions.relativeHumidity[0]._ + '%');
       if (!conditions.wind[0].gust[0]._) {
