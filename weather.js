@@ -48,7 +48,7 @@ for (var site in result.siteList.site) {
       if (!conditions.wind[0].gust[0]._) {
         conditions.wind[0].gust[0]._ = '-';
       }
-      console.log('💨 Wind: ' + conditions.wind[0].speed[0]._ + 'km/h gusting ' + conditions.wind[0].gust[0]._ + 'km/h from ' + conditions.wind[0].direction[0] + ' (' + conditions.wind[0].bearing[0]._ + '°)');
+      console.log('💨 Wind: ' + conditions.wind[0].speed[0]._ + 'km/h gusting ' + conditions.wind[0].gust[0]._ + 'km/h from ' + conditions.wind[0].direction[0]._ + ' (' + conditions.wind[0].bearing[0]._ + '°)');
     });
     });
     }).end();
